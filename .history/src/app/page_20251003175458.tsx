@@ -485,7 +485,7 @@ const GoldysFlavorQuiz = () => {
             <ul className="space-y-2 text-gray-700">
               <li className="flex items-start">
                 <span className="text-yellow-600 mr-2">✓</span>
-                <span>Sun-grown in California&apos;s Emerald Triangle</span>
+                <span>Sun-grown in California's Emerald Triangle</span>
               </li>
               <li className="flex items-start">
                 <span className="text-yellow-600 mr-2">✓</span>

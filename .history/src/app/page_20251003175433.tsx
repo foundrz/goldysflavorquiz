@@ -247,7 +247,7 @@ const GoldysFlavorQuiz = () => {
               <p className="text-gray-700">
                 Discover which terpene profile matches your personality. 
                 From gassy to fruity, earthy to classic — find your perfect match from 
-                Goldy&apos;s premium Emerald Triangle collection.
+                Goldy's premium Emerald Triangle collection.
               </p>
             </div>
           </div>
@@ -388,7 +388,7 @@ const GoldysFlavorQuiz = () => {
               <p className="text-gray-700">
                 These strain matches are based on our <em>exclusive Flavor Match™ system</em> — 
                 developed from decades of legacy Emerald Triangle farming knowledge. 
-                Please don&apos;t share the details publicly, only with friends who will truly 
+                Please don't share the details publicly, only with friends who will truly 
                 appreciate the difference.
               </p>
             </div>
@@ -411,7 +411,7 @@ const GoldysFlavorQuiz = () => {
               <p className="text-gray-700">
                 Because we work only with small, family-run farms, availability is 
                 extremely limited. We cannot guarantee your matched strain will remain 
-                in stock — once it&apos;s gone, it&apos;s gone.
+                in stock — once it's gone, it's gone.
               </p>
             </div>
           </div>
@@ -445,7 +445,7 @@ const GoldysFlavorQuiz = () => {
             <Sparkles className="w-12 h-12" />
           </div>
           <h2 className="text-3xl font-bold mb-2">
-            You&apos;re a {result?.name}!
+            You're a {result?.name}!
           </h2>
           <p className="text-white/90 text-lg max-w-md mx-auto">
             {result?.description}
@@ -485,7 +485,7 @@ const GoldysFlavorQuiz = () => {
             <ul className="space-y-2 text-gray-700">
               <li className="flex items-start">
                 <span className="text-yellow-600 mr-2">✓</span>
-                <span>Sun-grown in California&apos;s Emerald Triangle</span>
+                <span>Sun-grown in California's Emerald Triangle</span>
               </li>
               <li className="flex items-start">
                 <span className="text-yellow-600 mr-2">✓</span>
