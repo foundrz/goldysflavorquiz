@@ -238,7 +238,7 @@ const GoldysFlavorQuiz = () => {
             
             {/* Headline and Text - Right Side on desktop, bottom on mobile */}
             <div className="flex-1 order-2 md:order-2 text-center pr-16 md:pr-20">
-              <h1 className="text-xl md:text-2xl font-bold mb-2 md:mb-3 text-gray-900 leading-tight">One Secret Flavor Test Reveals Your Perfect Strain (Most People Get It Wrong)</h1>
+              <h1 className="text-xl md:text-2xl font-bold mb-2 md:mb-3 text-gray-900 leading-tight">One Secret Flavor Test Reveals Your Perfect Strain</h1>
               <p className="text-gray-700 text-sm md:text-base leading-relaxed">
                 Developed from 50+ years of Emerald Triangle farming tradition — discover your flower flavor identity in 60 seconds.
               </p>
