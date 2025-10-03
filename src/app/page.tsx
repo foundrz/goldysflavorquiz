@@ -3,15 +3,24 @@
 import React, { useState } from 'react';
 import { Sparkles, Sun, Leaf, Wind, Coffee, Moon, Star, ChevronRight, ArrowRight, Check } from 'lucide-react';
 
+type FlavorKey = 'fruity' | 'gassy' | 'earthy' | 'classic';
+type FlavorProfile = { name: string; description: string; strains: string[]; color: string };
+type Question = {
+  id: string;
+  question: string;
+  icon: React.ReactNode;
+  options: Array<{ text: string; value: string; emoji: string }>;
+};
+
 const GoldysFlavorQuiz = () => {
   const [currentStep, setCurrentStep] = useState<string | number>('intro');
   const [answers, setAnswers] = useState<Record<string, string>>({});
-  const [progress, setProgress] = useState(0);
-  const [showLoading, setShowLoading] = useState(false);
-  const [loadingProgress, setLoadingProgress] = useState(0);
-  const [result, setResult] = useState(null);
+  const [progress, setProgress] = useState<number>(0);
+  const [showLoading, setShowLoading] = useState<boolean>(false);
+  const [loadingProgress, setLoadingProgress] = useState<number>(0);
+  const [result, setResult] = useState<FlavorProfile | null>(null);
 
-  const questions = [
+  const questions: Question[] = [
     {
       id: 'vibe',
       question: 'When you light up, what\'s your ideal vibe?',
@@ -91,7 +100,7 @@ const GoldysFlavorQuiz = () => {
     }
   ];
 
-  const flavorProfiles = {
+  const flavorProfiles: Record<FlavorKey, FlavorProfile> = {
     fruity: {
       name: 'Fruity Explorer',
       description: 'You\'re all about those sweet, citrusy terps that lift your mood and brighten your day.',
@@ -118,8 +127,8 @@ const GoldysFlavorQuiz = () => {
     }
   };
 
-  const calculateResult = () => {
-    const flavorScore = { fruity: 0, gassy: 0, earthy: 0, classic: 0 };
+  const calculateResult = (): FlavorProfile => {
+    const flavorScore: Record<FlavorKey, number> = { fruity: 0, gassy: 0, earthy: 0, classic: 0 };
     
     if (answers.flavor) flavorScore[answers.flavor] += 3;
     
@@ -143,9 +152,9 @@ const GoldysFlavorQuiz = () => {
     if (answers.feel === 'grounded') flavorScore.earthy += 2;
     if (answers.feel === 'balanced') flavorScore.classic += 2;
     
-    const topFlavor = Object.entries(flavorScore).reduce((a, b) => 
-      flavorScore[a[0]] > b[1] ? a : b
-    )[0];
+    const topFlavor = (Object.entries(flavorScore).reduce((a, b) =>
+      (flavorScore[a[0] as FlavorKey] > b[1] ? a : b)
+    )[0]) as FlavorKey;
     
     return flavorProfiles[topFlavor];
   };
@@ -173,7 +182,7 @@ const GoldysFlavorQuiz = () => {
     }
   };
 
-  const simulateLoading = () => {
+  const simulateLoading = (): void => {
     setLoadingProgress(0);
     const stages = [
       { progress: 35, delay: 800 },
@@ -429,7 +438,7 @@ const GoldysFlavorQuiz = () => {
           </button>
 
           <p className="text-xs text-gray-500 text-center mt-6">
-            By clicking "I Agree" you confirm you are 21+ and understand these products 
+            By clicking &quot;I Agree&quot; you confirm you are 21+ and understand these products 
             contain THCA which converts to THC when heated.
           </p>
         </div>
@@ -468,10 +477,10 @@ const GoldysFlavorQuiz = () => {
             <h3 className="font-bold text-gray-800 mb-3 text-lg">
               🌟 EXCLUSIVE OFFER: Get 20% Off Your First Order
             </h3>
-            <p className="text-gray-700 mb-4">
+              <p className="text-gray-700 mb-4">
               As a quiz taker, you qualify for our exclusive discount on any of your 
               matched strains. This offer expires in 48 hours.
-            </p>
+              </p>
             <div className="bg-white rounded-lg px-6 py-3 inline-block shadow-sm border border-amber-200">
               <code className="text-xl font-mono font-bold text-amber-900">MYVIBE20</code>
             </div>
