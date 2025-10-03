@@ -216,9 +216,9 @@ const GoldysFlavorQuiz = () => {
             </div>
           </div>
           
-          <div className="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-8">
-            {/* Farm Landscape Image - Left Side on desktop, centered on mobile */}
-            <div className="flex-shrink-0 order-1 md:order-1 flex justify-center md:justify-start">
+          <div className="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-8">
+            {/* Farm Landscape Image - Left Side on desktop, top on mobile */}
+            <div className="flex-shrink-0 order-1 md:order-1">
               <img 
                 src="/farm-landscape.png" 
                 alt="Emerald Triangle farm landscape with golden hour lighting and cannabis fields"
@@ -227,7 +227,7 @@ const GoldysFlavorQuiz = () => {
             </div>
             
             {/* Headline and Text - Right Side on desktop, bottom on mobile */}
-            <div className="flex-1 order-2 md:order-2 text-center pr-16 md:pr-20">
+            <div className="flex-1 order-2 md:order-2 text-center">
               <h1 className="text-xl md:text-2xl font-bold mb-2 md:mb-3 text-gray-900 leading-tight">One Secret Flavor Test Reveals Your Perfect Strain (Most People Get It Wrong)</h1>
               <p className="text-gray-700 text-sm md:text-base leading-relaxed">
                 Developed from 50+ years of Emerald Triangle farming tradition — discover your flower flavor identity in 60 seconds.
@@ -367,7 +367,7 @@ const GoldysFlavorQuiz = () => {
             🎉 Congratulations!
           </h2>
           <p className="text-gray-700 text-lg">
-            We've matched you with your <strong>perfect cannabis strain</strong> — 
+            We've matched you with your <strong>perfect cannabis flavor + strain vibe</strong> — 
             but before we reveal it, our team needs you to agree to a few quick guidelines 
             (our lawyers make us say this part 👇).
           </p>

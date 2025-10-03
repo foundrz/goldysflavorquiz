@@ -210,15 +210,15 @@ const GoldysFlavorQuiz = () => {
       <div className="bg-white/95 backdrop-blur rounded-2xl shadow-2xl overflow-hidden">
         <div className="bg-gradient-to-r from-yellow-400 to-orange-400 p-4 md:p-8 text-white relative">
           {/* Leaf Icon - Top Right Corner */}
-          <div className="absolute top-4 right-1 md:top-8 md:right-4">
-            <div className="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-white/20 backdrop-blur rounded-full">
-              <Leaf className="w-6 h-6 md:w-8 md:h-8" />
+          <div className="absolute top-4 right-2 md:top-8 md:right-6">
+            <div className="flex items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-white/20 backdrop-blur rounded-full">
+              <Leaf className="w-8 h-8 md:w-12 md:h-12" />
             </div>
           </div>
           
-          <div className="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-8">
-            {/* Farm Landscape Image - Left Side on desktop, centered on mobile */}
-            <div className="flex-shrink-0 order-1 md:order-1 flex justify-center md:justify-start">
+          <div className="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-8">
+            {/* Farm Landscape Image - Left Side on desktop, top on mobile */}
+            <div className="flex-shrink-0 order-1 md:order-1">
               <img 
                 src="/farm-landscape.png" 
                 alt="Emerald Triangle farm landscape with golden hour lighting and cannabis fields"
@@ -227,7 +227,7 @@ const GoldysFlavorQuiz = () => {
             </div>
             
             {/* Headline and Text - Right Side on desktop, bottom on mobile */}
-            <div className="flex-1 order-2 md:order-2 text-center pr-16 md:pr-20">
+            <div className="flex-1 order-2 md:order-2 text-center">
               <h1 className="text-xl md:text-2xl font-bold mb-2 md:mb-3 text-gray-900 leading-tight">One Secret Flavor Test Reveals Your Perfect Strain (Most People Get It Wrong)</h1>
               <p className="text-gray-700 text-sm md:text-base leading-relaxed">
                 Developed from 50+ years of Emerald Triangle farming tradition — discover your flower flavor identity in 60 seconds.
@@ -327,33 +327,30 @@ const GoldysFlavorQuiz = () => {
 
   const renderLoading = () => (
     <div className="max-w-2xl mx-auto">
-      <div className="bg-white/95 backdrop-blur rounded-2xl shadow-2xl p-8">
+      <div className="bg-white/95 backdrop-blur rounded-2xl shadow-2xl p-12">
         <div className="text-center">
-          <div className="relative w-20 h-20 mx-auto mb-4">
-            <div className="absolute inset-0 bg-green-100 rounded-full animate-ping opacity-30"></div>
-            <div className="relative flex items-center justify-center w-20 h-20 bg-green-100 rounded-full animate-pulse">
-              <Leaf className="w-10 h-10 text-green-600" />
+          <div className="relative w-32 h-32 mx-auto mb-6">
+            <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full animate-ping opacity-20"></div>
+            <div className="relative flex items-center justify-center w-32 h-32 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full animate-pulse">
+              <Leaf className="w-16 h-16 text-gray-900" />
             </div>
           </div>
-          <h2 className="text-xl font-bold text-gray-800 mb-2">
-            Thank you. We are evaluating your answers.
+          <h2 className="text-2xl font-bold text-gray-800 mb-2">
+            Analyzing Your Vibe...
           </h2>
-          <p className="text-gray-600 mb-4">
+          <p className="text-gray-600 mb-6">
             {loadingProgress < 50 
               ? 'Checking our Flavor Match™ Database...'
               : loadingProgress < 80
               ? 'Analyzing terpene preferences...'
               : 'Finding your perfect match!'}
           </p>
-          <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden mb-2">
+          <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
             <div
-              className="bg-green-400 h-2 rounded-full transition-all duration-500"
+              className="bg-gradient-to-r from-yellow-400 to-orange-400 h-3 rounded-full transition-all duration-500"
               style={{ width: `${loadingProgress}%` }}
             />
           </div>
-          <p className="text-sm text-gray-500">
-            Evaluation {loadingProgress}% Complete...
-          </p>
         </div>
       </div>
     </div>
@@ -367,7 +364,7 @@ const GoldysFlavorQuiz = () => {
             🎉 Congratulations!
           </h2>
           <p className="text-gray-700 text-lg">
-            We've matched you with your <strong>perfect cannabis strain</strong> — 
+            We've matched you with your <strong>perfect cannabis flavor + strain vibe</strong> — 
             but before we reveal it, our team needs you to agree to a few quick guidelines 
             (our lawyers make us say this part 👇).
           </p>

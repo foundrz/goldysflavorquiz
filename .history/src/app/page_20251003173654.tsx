@@ -216,7 +216,7 @@ const GoldysFlavorQuiz = () => {
             </div>
           </div>
           
-          <div className="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-8">
+          <div className="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-8">
             {/* Farm Landscape Image - Left Side on desktop, centered on mobile */}
             <div className="flex-shrink-0 order-1 md:order-1 flex justify-center md:justify-start">
               <img 

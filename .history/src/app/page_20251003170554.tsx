@@ -208,29 +208,25 @@ const GoldysFlavorQuiz = () => {
   const renderIntro = () => (
     <div className="max-w-6xl mx-auto">
       <div className="bg-white/95 backdrop-blur rounded-2xl shadow-2xl overflow-hidden">
-        <div className="bg-gradient-to-r from-yellow-400 to-orange-400 p-4 md:p-8 text-white relative">
-          {/* Leaf Icon - Top Right Corner */}
-          <div className="absolute top-4 right-1 md:top-8 md:right-4">
-            <div className="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-white/20 backdrop-blur rounded-full">
-              <Leaf className="w-6 h-6 md:w-8 md:h-8" />
-            </div>
-          </div>
-          
-          <div className="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-8">
-            {/* Farm Landscape Image - Left Side on desktop, centered on mobile */}
-            <div className="flex-shrink-0 order-1 md:order-1 flex justify-center md:justify-start">
+        <div className="bg-gradient-to-r from-yellow-400 to-orange-400 p-8 text-white">
+          <div className="flex items-center space-x-8">
+            {/* Farm Landscape Image - Left Side */}
+            <div className="flex-shrink-0">
               <img 
                 src="/farm-landscape.png" 
                 alt="Emerald Triangle farm landscape with golden hour lighting and cannabis fields"
-                className="w-40 h-32 md:w-48 md:h-36 object-cover rounded-lg shadow-md"
+                className="w-80 h-80 object-cover rounded-xl shadow-lg"
               />
             </div>
             
-            {/* Headline and Text - Right Side on desktop, bottom on mobile */}
-            <div className="flex-1 order-2 md:order-2 text-center pr-16 md:pr-20">
-              <h1 className="text-xl md:text-2xl font-bold mb-2 md:mb-3 text-gray-900 leading-tight">One Secret Flavor Test Reveals Your Perfect Strain (Most People Get It Wrong)</h1>
-              <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-                Developed from 50+ years of Emerald Triangle farming tradition — discover your flower flavor identity in 60 seconds.
+            {/* Headline and Text - Right Side */}
+            <div className="flex-1">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 backdrop-blur rounded-full mb-6">
+                <Leaf className="w-12 h-12" />
+              </div>
+              <h1 className="text-4xl font-bold mb-6 text-gray-900 leading-tight">Which Strain Flavor Fits Your Vibe?</h1>
+              <p className="text-gray-700 text-lg leading-relaxed">
+                Skip the hype. We'll match you with a flavor identity rooted in real Emerald Triangle terroir — then suggest the sun-grown strain that fits your ritual.
               </p>
             </div>
           </div>
@@ -238,25 +234,37 @@ const GoldysFlavorQuiz = () => {
 
         <div className="p-8">
           <div className="bg-white border border-gray-200 rounded-xl p-6 mb-8 shadow-sm">
-            <div className="text-center">
-              <div className="flex justify-center mb-4">
-                <Sun className="w-6 h-6 text-yellow-600" />
+            <div className="flex items-start space-x-3">
+              <Sun className="w-6 h-6 text-yellow-600 flex-shrink-0 mt-1" />
+              <div>
+                <h3 className="font-bold text-gray-900 mb-2">Sun-Grown California Cannabis</h3>
+                <p className="text-gray-700">
+                  Discover which terpene profile matches your personality. 
+                  From gassy to fruity, earthy to classic — find your perfect match from 
+                  Goldy's premium Emerald Triangle collection.
+                </p>
               </div>
-              <h3 className="font-bold text-gray-900 mb-2">Sun-Grown California Cannabis</h3>
-              <p className="text-gray-700">
-                Discover which terpene profile matches your personality. 
-                From gassy to fruity, earthy to classic — find your perfect match from 
-                Goldy's premium Emerald Triangle collection.
-              </p>
             </div>
           </div>
 
+          <div className="grid grid-cols-2 gap-4 mb-8">
+            <div className="text-center p-4 bg-gray-50 rounded-lg">
+              <div className="text-3xl mb-2">🌿</div>
+              <div className="font-semibold text-gray-800">7 Questions</div>
+              <div className="text-sm text-gray-500">Quick & fun</div>
+            </div>
+            <div className="text-center p-4 bg-gray-50 rounded-lg">
+              <div className="text-3xl mb-2">🎯</div>
+              <div className="font-semibold text-gray-800">Personalized</div>
+              <div className="text-sm text-gray-500">Your flavor profile</div>
+            </div>
+          </div>
 
           <button
             onClick={handleStartQuiz}
             className="w-full bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-8 py-4 rounded-xl font-bold text-lg hover:from-yellow-500 hover:to-orange-500 transition-all transform hover:scale-[1.02] flex items-center justify-center group shadow-lg"
           >
-            Start the Strain Match™ Quiz
+            Start the Vibe Check
             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
 
@@ -327,33 +335,30 @@ const GoldysFlavorQuiz = () => {
 
   const renderLoading = () => (
     <div className="max-w-2xl mx-auto">
-      <div className="bg-white/95 backdrop-blur rounded-2xl shadow-2xl p-8">
+      <div className="bg-white/95 backdrop-blur rounded-2xl shadow-2xl p-12">
         <div className="text-center">
-          <div className="relative w-20 h-20 mx-auto mb-4">
-            <div className="absolute inset-0 bg-green-100 rounded-full animate-ping opacity-30"></div>
-            <div className="relative flex items-center justify-center w-20 h-20 bg-green-100 rounded-full animate-pulse">
-              <Leaf className="w-10 h-10 text-green-600" />
+          <div className="relative w-32 h-32 mx-auto mb-6">
+            <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full animate-ping opacity-20"></div>
+            <div className="relative flex items-center justify-center w-32 h-32 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full animate-pulse">
+              <Leaf className="w-16 h-16 text-gray-900" />
             </div>
           </div>
-          <h2 className="text-xl font-bold text-gray-800 mb-2">
-            Thank you. We are evaluating your answers.
+          <h2 className="text-2xl font-bold text-gray-800 mb-2">
+            Analyzing Your Vibe...
           </h2>
-          <p className="text-gray-600 mb-4">
+          <p className="text-gray-600 mb-6">
             {loadingProgress < 50 
               ? 'Checking our Flavor Match™ Database...'
               : loadingProgress < 80
               ? 'Analyzing terpene preferences...'
               : 'Finding your perfect match!'}
           </p>
-          <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden mb-2">
+          <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
             <div
-              className="bg-green-400 h-2 rounded-full transition-all duration-500"
+              className="bg-gradient-to-r from-yellow-400 to-orange-400 h-3 rounded-full transition-all duration-500"
               style={{ width: `${loadingProgress}%` }}
             />
           </div>
-          <p className="text-sm text-gray-500">
-            Evaluation {loadingProgress}% Complete...
-          </p>
         </div>
       </div>
     </div>
@@ -367,7 +372,7 @@ const GoldysFlavorQuiz = () => {
             🎉 Congratulations!
           </h2>
           <p className="text-gray-700 text-lg">
-            We've matched you with your <strong>perfect cannabis strain</strong> — 
+            We've matched you with your <strong>perfect cannabis flavor + strain vibe</strong> — 
             but before we reveal it, our team needs you to agree to a few quick guidelines 
             (our lawyers make us say this part 👇).
           </p>
@@ -502,7 +507,7 @@ const GoldysFlavorQuiz = () => {
           </div>
 
           <button
-            onClick={() => window.location.href = 'https://goldysflower.com/collections/top-brand-flower'}
+            onClick={() => window.location.href = 'https://goldysflower.com'}
             className="w-full bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-8 py-4 rounded-xl font-bold text-lg hover:from-yellow-500 hover:to-orange-500 transition-all transform hover:scale-[1.02] flex items-center justify-center group mb-4 shadow-lg"
           >
             Shop Your Perfect Match
