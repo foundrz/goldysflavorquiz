@@ -115,7 +115,7 @@ const GoldysFlavorQuiz = () => {
     },
     earthy: {
       name: 'Earth Child',
-      description: 'You connect with nature&apos;s essence through piney, herbal notes that ground your soul.',
+      description: 'You connect with nature\'s essence through piney, herbal notes that ground your soul.',
       strains: ['Northern Lights', 'Jack Herer', 'Durban Poison'],
       color: 'from-green-600 to-green-800'
     },
