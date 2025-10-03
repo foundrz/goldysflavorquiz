@@ -350,7 +350,7 @@ const GoldysFlavorQuiz = () => {
           </h2>
           <p className="text-gray-600 mb-4">
             {loadingProgress < 50 
-              ? 'Checking our Flavor Match™ Database...'
+              ? 'Checking our Strain Match™ Database...'
               : loadingProgress < 80
               ? 'Analyzing terpene preferences...'
               : 'Finding your perfect match!'}
@@ -395,7 +395,7 @@ const GoldysFlavorQuiz = () => {
                 1. Keep This Discovery Private
               </h4>
               <p className="text-gray-700">
-                These strain matches are based on our <em>exclusive Flavor Match™ system</em> — 
+                These strain matches are based on our <em>exclusive Strain Match™ system</em> — 
                 developed from decades of legacy Emerald Triangle farming knowledge. 
                 Please don&apos;t share the details publicly, only with friends who will truly 
                 appreciate the difference.
