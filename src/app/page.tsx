@@ -130,7 +130,7 @@ const GoldysFlavorQuiz = () => {
   const calculateResult = (): FlavorProfile => {
     const flavorScore: Record<FlavorKey, number> = { fruity: 0, gassy: 0, earthy: 0, classic: 0 };
     
-    if (answers.flavor) flavorScore[answers.flavor] += 3;
+    if (answers.flavor) flavorScore[answers.flavor as FlavorKey] += 3;
     
     if (answers.vibe === 'creative') flavorScore.fruity += 2;
     if (answers.vibe === 'chill') flavorScore.classic += 2;
