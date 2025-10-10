@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Goldy's Strain Match Quiz",
-  description: "Discover your perfect cannabis strain with our flavor test. Developed from 50+ years of Emerald Triangle farming tradition.",
+  description: "Discover your perfect flower strain with our flavor test. Developed from 50+ years of Emerald Triangle farming tradition.",
 };
 
 export default function RootLayout({
