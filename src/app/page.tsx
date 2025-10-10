@@ -45,7 +45,7 @@ const GoldysFlavorQuiz = () => {
     },
     {
       id: 'time',
-      question: 'What\'s your favorite time to enjoy cannabis?',
+      question: 'What\'s your favorite time to enjoy flower?',
       icon: <Sun className="w-8 h-8" />,
       options: [
         { text: 'Mornings to kick off the day', value: 'morning', emoji: '☀️' },
@@ -56,7 +56,7 @@ const GoldysFlavorQuiz = () => {
     },
     {
       id: 'wine',
-      question: 'If cannabis was wine, your taste would be:',
+      question: 'If flower was wine, your taste would be:',
       icon: <Star className="w-8 h-8" />,
       options: [
         { text: 'Crisp white (refreshing, light)', value: 'white', emoji: '🥂' },
@@ -89,7 +89,7 @@ const GoldysFlavorQuiz = () => {
     },
     {
       id: 'feel',
-      question: 'How do you want your cannabis to feel?',
+      question: 'How do you want your flower to feel?',
       icon: <Moon className="w-8 h-8" />,
       options: [
         { text: 'Clear-headed & creative', value: 'clear', emoji: '✨' },
@@ -231,7 +231,7 @@ const GoldysFlavorQuiz = () => {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img 
                 src="/farm-landscape.png" 
-                alt="Emerald Triangle farm landscape with golden hour lighting and cannabis fields"
+                alt="Emerald Triangle farm landscape with golden hour lighting and flower fields"
                 className="w-40 h-32 md:w-48 md:h-36 object-cover rounded-lg shadow-md"
               />
             </div>
@@ -252,7 +252,7 @@ const GoldysFlavorQuiz = () => {
               <div className="flex justify-center mb-4">
                 <Sun className="w-6 h-6 text-yellow-600" />
               </div>
-              <h3 className="font-bold text-gray-900 mb-2">Sun-Grown California Cannabis</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Sun-Grown California Flower</h3>
               <p className="text-gray-700">
                 Discover which terpene profile matches your personality. 
                 From gassy to fruity, earthy to classic — find your perfect match from 
@@ -377,7 +377,7 @@ const GoldysFlavorQuiz = () => {
             🎉 Congratulations!
           </h2>
           <p className="text-gray-700 text-lg">
-            We&apos;ve matched you with your <strong>perfect cannabis strain</strong> — 
+            We&apos;ve matched you with your <strong>perfect flower strain</strong> — 
             but before we reveal it, our team needs you to agree to a few quick guidelines 
             (our lawyers make us say this part 👇).
           </p>
@@ -407,8 +407,8 @@ const GoldysFlavorQuiz = () => {
                 2. Use Responsibly
               </h4>
               <p className="text-gray-700">
-                Our premium, sun-grown THCA flower is <em>stronger and tastier</em> than 
-                most mass-produced cannabis. Many customers are shocked at the difference 
+                Our premium, sun-grown flower is <em>stronger and tastier</em> than 
+                most mass-produced flower. Many customers are shocked at the difference 
                 in smoothness and potency. Please enjoy responsibly.
               </p>
             </div>
@@ -439,7 +439,7 @@ const GoldysFlavorQuiz = () => {
 
           <p className="text-xs text-gray-500 text-center mt-6">
             By clicking &quot;I Agree&quot; you confirm you are 21+ and understand these products 
-            contain THCA which converts to THC when heated.
+            contain flower which converts to THC when heated.
           </p>
         </div>
       </div>
@@ -502,7 +502,7 @@ const GoldysFlavorQuiz = () => {
               </li>
               <li className="flex items-start">
                 <span className="text-yellow-600 mr-2">✓</span>
-                <span>Lab-tested, Farm Bill compliant THCA</span>
+                <span>Lab-tested, Farm Bill compliant flower</span>
               </li>
               <li className="flex items-start">
                 <span className="text-yellow-600 mr-2">✓</span>
